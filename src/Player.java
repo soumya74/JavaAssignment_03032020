@@ -35,7 +35,8 @@ public class Player implements Comparable<Player> {
 		return "Player [" + cardList + ", name=" + name + "]";
 	}
 
-	//Descending order of Cards
+	// Descending order of Cards
+	// In case, two cards having same face value, card with higher Suit order is given higher priority
 	@Override
 	public int compareTo(Player p2) {
 		

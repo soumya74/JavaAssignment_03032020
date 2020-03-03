@@ -49,12 +49,15 @@ abstract class CardGame {
 		cardDeck.shuffle();
 	}
 	
+	// Can make this Winner calculation logic separate for SingleCard, DoubleCard games
 	Optional<Player> declareWinner(){
 		Player p = null;
 		
 		if(players.size() == 0) {
 			return Optional.ofNullable(p);
 		}
+		
+		// Players are sorted using logic implemented in Players class
 		Collections.sort(players);
 		
 		return Optional.ofNullable(players.get(0));
